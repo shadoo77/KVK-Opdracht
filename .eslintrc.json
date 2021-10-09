@@ -16,9 +16,6 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    // "parserOptions": {
-    //     "project": "./tsconfig.json"
-    // },
     "plugins": [
         "react",
         "@typescript-eslint",
