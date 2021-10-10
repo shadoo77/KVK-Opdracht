@@ -9,21 +9,23 @@ export default function ButtonAppBar() {
   const history = useHistory();
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky">
-        <Toolbar>
-          <Button
-            color="inherit"
-            startIcon={<ArrowBackIosIcon />}
-            onClick={() => history.push('/')}
-          >
-            Home
-          </Button>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            KVK - Opdracht
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div className="app-bar">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="sticky">
+          <Toolbar>
+            <Button
+              color="inherit"
+              startIcon={<ArrowBackIosIcon />}
+              onClick={() => history.push('/')}
+            >
+              Home
+            </Button>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              KVK - Opdracht
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </div>
   );
 }
