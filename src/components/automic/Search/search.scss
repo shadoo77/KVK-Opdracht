@@ -17,6 +17,10 @@
     display: flex;
     flex-direction: row;
 
+    @include xxs {
+      flex-direction: column;
+    }
+
     &-box {
       flex-grow: 1;
       margin-right: 10px;
@@ -26,12 +30,21 @@
     &-select {
       .MuiFormControl-root {
         margin-top: 0;
+        
+        @include xxs {
+          flex-grow: 1;
+          margin-top: 20px;
+        }
       }
     }
 
     &-radio-group {
       display: flex;
       flex-direction: column;
+
+      @include xxs {
+        flex-direction: row;
+      }
 
       & label {
         justify-content: center;

@@ -3,7 +3,6 @@ $progress-circle-height: 24px;
 
 .main-app {
   width: 100%;
-  font-family: 'Ciutadella';
 
   header {
     width: 100%;
@@ -17,6 +16,12 @@ $progress-circle-height: 24px;
     height: calc(100vh - #{$app-bar-height});
     margin: 0 auto;
     padding: 20px;
+  }
+
+  .wrong-page {
+    h2 {
+      color: red;
+    }
   }
 
 }

@@ -140,7 +140,17 @@ function Search({ animaleKind, selectedItems }: ISearchProps) {
           <div className="search-options">
             <div className="search-options-box">
               <div className="search-options-radio-group">
-                <FormControlLabel value="type" control={<Radio />} label="Type" />
+                <FormControlLabel
+                  value="type"
+                  control={
+                    <Radio
+                      inputProps={{
+                        id: 'radio-button-for-search-box'
+                      }}
+                    />
+                  }
+                  label="Type"
+                />
                 <TextField
                   name="seachTerm"
                   disabled={checked === 'select'}
@@ -163,17 +173,30 @@ function Search({ animaleKind, selectedItems }: ISearchProps) {
             </div>
             <div className="search-options-select">
               <div className="search-options-radio-group">
-                <FormControlLabel value="select" control={<Radio />} label="Select" />
+                <FormControlLabel
+                  value="select"
+                  control={
+                    <Radio
+                      inputProps={{
+                        id: 'radio-button-for-select'
+                      }}
+                    />
+                  }
+                  label="Select"
+                />
                 <FormControl sx={{ m: 1, minWidth: 120 }} error={!!errors.selected}>
-                  <InputLabel id="demo-simple-select-helper-label">Variant</InputLabel>
+                  <InputLabel id="demo-simple-select-helper-label">Variants</InputLabel>
                   <Select
                     name="selected"
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={selected}
-                    label="Age"
+                    label="Variants"
                     onChange={handleSelect}
                     disabled={checked === 'type'}
+                    inputProps={{
+                      id: 'select-animale-dropdown'
+                    }}
                   >
                     <MenuItem value="">
                       <em>None</em>

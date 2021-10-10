@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
 
+  @include xxs {
+    min-height: 250px;
+  }
+
   &-error {
     color: red;
   }
@@ -23,6 +27,10 @@
       height: fit-content;
       max-height: 350px;
       border-radius: 4px;
+
+      @include xxs {
+        min-height: 250px;
+      }
     }
   }
 }

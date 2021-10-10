@@ -6,7 +6,9 @@ import Constants from '../../constants/constants';
 function Dog() {
   return (
     <div>
-      <h2>Dog page</h2>
+      <div className="page-title">
+        <h2>Dog page</h2>
+      </div>
       <Search animaleKind={Constants.ANIMALE_TYPE.DOG} selectedItems={Constants.DOG_LIST} />
       <AnimaleRender />
     </div>
