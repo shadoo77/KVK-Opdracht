@@ -33,8 +33,7 @@ function Search({ animaleKind, selectedItems }: ISearchProps) {
   // When we launch on dog or cat page we need to reset state
   useEffect(() => {
     resetState();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [resetState]);
 
   const handleChangeSearchTerm = (event: React.ChangeEvent<{ value: string, name: string }>) => {
     setSearchTerm(event.target.value);
