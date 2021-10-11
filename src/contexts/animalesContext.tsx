@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useCallback } from 'react';
 
 interface IState {
   imageSrc?: string,
@@ -27,9 +27,11 @@ const AnimalesContext = createContext<IAnimalesContext | undefined>(undefined);
 export function AnimalesProvider(props: any) {
   const [state, setState] = useState(initialState);
 
-  const resetState: React.DispatchWithoutAction = () => {
-    setState(initialState);
-  };
+  const resetState = useCallback(
+    () => {
+      setState(initialState);
+    }, []
+  );
 
   const stateUpdater = (obj: IState) => {
     setState({
